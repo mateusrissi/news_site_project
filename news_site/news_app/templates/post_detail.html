@@ -30,37 +30,19 @@
 			<h1><strong>This website</strong> is a super<br />
 				simple responsive template for news</a>.</h1>
 		</div>
-		<div class="inner">
-			<form method="post" action="#">
-				{% csrf_token %}
-				<div class="row gtr-uniform gtr-50">
-					<div class="col-6 col-12-xsmall"><input type="text" name="search" id="search"
-							placeholder="Search for a post" /></div>
-				</div>
-			</form>
-		</div>
 	</header>
 
 	<!-- Main -->
 	<div id="main">
-		<h2>Latest News</h2>
-		<div class="row">
-			{% for post in posts %}
-			<article class="col-6 col-12-xsmall work-item">
-				{% if post.img %}
-				<a href="{% url 'post_detail' post.id %}" class="image fit thumb"><img src="{{ post.img.url }}"
-						alt="" /></a>
-				{% else %}
-				<a href="{% url 'post_detail' post.id %}" class="image fit thumb"><img
-						src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
-				{% endif%}
-				<h3>{{ post.title }}</h3>
-			</article>
-			{% endfor %}
-		</div>
-		<ul class="actions">
-			<li><a href="#" class="button">Full Archive</a></li>
-		</ul>
+		<header>
+			<a href="{% url 'home' %}">Return Home</a><br><br>
+			<h1>{{ post.title }}</h1>
+		</header>
+		{% if post.img %}
+		<img src="{{ post.img.url }}">
+		{% endif%}
+		<h2>{{ post.sub_title }}</h2>
+		<p>{{ post.content }}</p>
 	</div>
 
 	<!-- Footer -->
