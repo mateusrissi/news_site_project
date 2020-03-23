@@ -2,7 +2,7 @@ from djongo import models
 
 
 class Author(models.Model):
-    name = models.CharField(max_length=150, primary_key=True)
+    name = models.CharField(db_index=True, max_length=150, primary_key=True)
     email = models.EmailField(default=None)
 
     def __str__(self):
@@ -10,14 +10,14 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=150, primary_key=True)
+    name = models.CharField(db_index=True,max_length=150, primary_key=True)
 
     def __str__(self):
         return self.name
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=100, unique=True)
+    title = models.CharField(db_index=True,max_length=100, unique=True)
     sub_title = models.CharField(max_length=200)
     author = models.ForeignKey(
         'Author', on_delete=models.CASCADE, default="Mateus")

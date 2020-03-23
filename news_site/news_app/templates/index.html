@@ -26,19 +26,14 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
-			<a href="#" class="image avatar"><img src="{% static 'images/avatar.png' %}" alt="" /></a>
 			<h1><strong>This website</strong> is a super<br />
 				simple responsive template for news</a>.</h1>
 		</div>
-		<div>
-			<form method="post" action="#">
-				{% csrf_token %}
-				<div class="row gtr-uniform gtr-50">
-					<div class="col-6 col-12-xsmall"><input type="text" name="search" id="search"
-							placeholder="Search for a post" /></div>
-				</div>
-			</form>
-		</div>
+		<br><br>
+		<form method="post" action="{% url 'search' %}">
+			{% csrf_token %}
+			<input type="text" style="color: black;" name="search" id="search" placeholder="Search for a post" />
+		</form>
 	</header>
 
 	<!-- Main -->
@@ -59,7 +54,7 @@
 			{% endfor %}
 		</div>
 		<ul class="actions">
-			<li><a href="#" class="button">Full Archive</a></li>
+			<li><a href="{% url 'archive' %}" class="button">Full Archive</a></li>
 		</ul>
 	</div>
 

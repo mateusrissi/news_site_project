@@ -12,7 +12,7 @@
 <html>
 
 <head>
-	<title>News - Post Detail</title>
+	<title>News - Full Archive</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="A template for a news website with Django back-end">
 	<meta name="author" content="Mateus Rissi">
@@ -40,14 +40,22 @@
 	<div id="main">
 		<header>
 			<a href="{% url 'home' %}">Return Home</a><br><br>
-			<h1>{{ post.title }}</h1>
+			<h2>Full Archive</h2>
 		</header>
-		{% if post.img %}
-		<img src="{{ post.img.url }}">
-		{% endif%}
-		<h2>{{ post.sub_title }}</h2>
-		<h3>{{ post.author }}</h3>
-		{{ post.content }}
+		<div class="row">
+			{% for post in posts %}
+			<article class="col-6 col-12-xsmall work-item">
+				{% if post.img %}
+				<a href="{% url 'post_detail' post.id %}" class="image fit thumb"><img src="{{ post.img.url }}"
+						alt="" /></a>
+				{% else %}
+				<a href="{% url 'post_detail' post.id %}" class="image fit thumb"><img
+						src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
+				{% endif%}
+				<h3>{{ post.title }}</h3>
+			</article>
+			{% endfor %}
+		</div>
 	</div>
 
 	<!-- Footer -->
