@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5e77fb1cf30d21fe511f4641"},"name":"Science"}
+{"_id":{"$oid":"5e77fb22f30d21fe511f4643"},"name":"General"}
+{"_id":{"$oid":"5e77fb2af30d21fe511f4645"},"name":"Politics"}
+{"_id":{"$oid":"5e77fb33f30d21fe511f4647"},"name":"Technology"}
