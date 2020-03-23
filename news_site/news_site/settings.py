@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'news_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'newsdb',
+        'NAME': 'newsappdb',
     }
 }
 
