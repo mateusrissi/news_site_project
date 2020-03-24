@@ -24,7 +24,6 @@ def latest_view(request):
 
 def search_view(request):
     r_search = request.POST['search']
-    #posts = Post.objects.filter(content__icontains=r_search)
     posts = Post.objects.filter(
         Q(published=True) & (Q(title__icontains=r_search) | Q(author__name__icontains=r_search) | Q(content__icontains=r_search))).order_by('-created_on')
     data = {'posts': posts}
