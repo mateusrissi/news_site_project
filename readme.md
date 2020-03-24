@@ -1,6 +1,6 @@
 # News Site
 
-Django application for a news website. With the Django Admin is possible to create, edit, remove and search the posts.
+Django application for a news website. With the Django Admin is possible to create, edit, remove and search the posts. At the front-end you can search for posts and also see the latest news and the archive, where all the posts are.
 
 MongoDB as database.
 
