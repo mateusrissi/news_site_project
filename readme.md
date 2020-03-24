@@ -6,24 +6,22 @@ MongoDB as database.
 
 ### View examples of the back-end
 
-Post creation
+##### Post creation
+![back-end-post-creation](https://i.imgur.com/AxlqzZC.png)
 
-![back-end-post-creation](https://imgur.com/AxlqzZC)
+##### Posts created
 
-Posts created
+![back-end-posts-created](https://i.imgur.com/Cz5wxWc.png)
 
-![back-end-posts-created](https://imgur.com/Cz5wxWc)
-
-Posts filtered
-
-![back-end-posts-filtered](https://imgur.com/DVG27jU)
+##### Posts filtered
+![back-end-posts-filtered](https://i.imgur.com/DVG27jU.png)
 
 ### View examples of the front-end
 
-Latest News as home page
+##### Latest News as home page
 
-![front-end-latest-news](https://imgur.com/ykJTpzl)
+![front-end-latest-news](https://i.imgur.com/ykJTpzl.png)
 
-Posts filtered
+##### Posts filtered
 
-![front-end-filtered](https://imgur.com/8ya4mQx)
+![front-end-filtered](https://i.imgur.com/8ya4mQx.png)
