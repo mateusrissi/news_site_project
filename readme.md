@@ -4,7 +4,7 @@ Django application for a news website. With the Django Admin is possible to crea
 
 MongoDB as database.
 
-### View examples of the back-end
+### View examples of the admin page
 
 ##### Post creation
 ![back-end-post-creation](https://i.imgur.com/AxlqzZC.png)
